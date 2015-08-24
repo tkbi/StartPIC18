@@ -13,7 +13,7 @@
 #pragma config PWRTEN = ON          // Power up timer enabled
 #pragma config BOREN = OFF          // Brown-out Reset disabled
 #pragma config WDTEN = OFF          // Watch dog timer is always disabled
-#pragma config MCLRE = INTMCLR      // MCLR disabled ... EXTMCLR
+#pragma config MCLRE = EXTMCLR      // MCLR enabled
 #pragma config LVP = OFF            // Single-Supply ICSP disabled
 
 /*******************************************************************************
