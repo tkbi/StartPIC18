@@ -1,8 +1,8 @@
 /*******************************************************************************
  * File:        main.c
  * Project:     SP18 - Ein- und Ausgaenge
- * Author:      Nicolas Meyertöns
- * Version:     siehe main.h
+ * Author:      Nicolas Pannwitz
+ * Version:     look at main.h
  * Web:         http://pic-projekte.de
  ******************************************************************************/
 
@@ -18,7 +18,7 @@
 #pragma config LVP = OFF            // Single-Supply ICSP disabled
 
 /*********************************************************************
- * Diverse Einstellungen zum PIC (IO, Takt, ...)
+ * main settings
  */
 
 void initPIC(void)
@@ -38,14 +38,14 @@ void initPIC(void)
 }
 
 /*********************************************************************
- * Tastenentprellung
+ * debouncing
  */
 
 uint8_t keyPressed (uint8_t *plastKeyDown)
 {
     uint8_t actKeyDown;
  
-    if(PB)
+    if(!PB)
     {
         actKeyDown = 1;
     }
@@ -64,7 +64,7 @@ uint8_t keyPressed (uint8_t *plastKeyDown)
 } 
 
 /*********************************************************************
- * Main Routine
+ * main
  */
 
 void main (void)
@@ -73,20 +73,20 @@ void main (void)
     
     initPIC();
     
-    /*Shut OFF the LCD-Backlight*/
+    /* turn off the LCD backlight */
     LATCbits.LC2 = 1;
     
-    /*Endlosschleife*/
+    /* endless loop */
     while(1)
     {
         __delay_ms(10);
         
         switch( keyPressed(&lastKeyDown) )
         {
-            case 0:
-                break;
-            case 1:
-                LED1 = ~LED1;
+            // push button pressed
+            case 1: LED1 = ~LED1;
+
+            default: break;
         }
     }
 }
