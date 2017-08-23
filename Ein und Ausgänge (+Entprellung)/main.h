@@ -1,8 +1,8 @@
 /*******************************************************************************
  * File:        main.h
  * Project:     SP18 - Ein- und Ausgaenge 
- * Author:      Nicolas Meyertöns
- * Version:     1.0
+ * Author:      Nicolas Pannwitz
+ * Version:     1.1
  * Web:         http://pic-projekte.de
  ******************************************************************************/
 
@@ -12,7 +12,7 @@
 #include <xc.h>
 
 /*********************************************************************
- * Nuetzliche Markos definieren (erleichtert das Schreiben/Lesen des Codes)
+ * defines
  */
 
 #define LED1        LATBbits.LB1
@@ -20,4 +20,3 @@
 #define _XTAL_FREQ  2000000 /*Clock frequency in Hz*/
 
 #endif	/* MAIN_H */
-
