@@ -1,7 +1,7 @@
 /*******************************************************************************
  * File:        main.c
  * Project:     SP18 - I2C OLED Display
- * Author:      Nicolas Meyertöns
+ * Author:      Nicolas MeyertÃ¶ns
  * Version:     siehe main.h
  * Web:         http://pic-projekte.de
  ******************************************************************************/
@@ -54,9 +54,10 @@ void main (void)
     LATCbits.LC2 = 1;
 
     /*Etwas Text in den Framebuffer schreiben*/
-    fb_draw_string(0,0,"SSD1306");
-    fb_draw_string(0,1,"pic-projekte.de");
-    fb_draw_string(0,2,"StartPIC18");
+    fb_draw_string_big(44,0,"OLED");
+    fb_draw_string_big(0,2,"Typ:  SSD1306");
+    fb_draw_string_big(0,4,"Size: 128x84");
+    fb_draw_string(15,7,"http://pic-projekte.de/");
 
     /*Den Framebuffer zur Anzeige bringen*/
     fb_show();
