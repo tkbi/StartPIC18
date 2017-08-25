@@ -1,8 +1,8 @@
 /*******************************************************************************
  * File:        main.h
  * Project:     SP18 - LC-Display
- * Author:      Nicolas Meyertöns
- * Version:     1.0
+ * Author:      Nicolas MeyertÃ¶ns
+ * Version:     1.1
  * Web:         http://pic-projekte.de
  ******************************************************************************/
 
